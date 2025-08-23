@@ -80,5 +80,50 @@
         </div>
       </div>
     </header>
+
+    <section
+      class="home-form-section border-2 border-green-400 max-w-lg mx-auto mt-6"
+    >
+      <h1 class="font-bold mb-2">Add Money</h1>
+      <form class="bg-white p-7 rounded-2xl border-2 border-blue-400">
+        <div>
+          <h2 class="font-semibold">Select A Book</h2>
+          <select class="select my-2 rounded-3xl bg-[#f4f5f7] w-full">
+            <option>Select Bank</option>
+            <option>ONE BANK</option>
+            <option>BRAC BANK</option>
+            <option>ASIAN BANK</option>
+          </select>
+        </div>
+
+        <div>
+          <label class="font-semibold" for="">Bank Account Number</label><br />
+          <input
+            type="text"
+            placeholder="Enter 11 digit account number"
+            class="input my-2 rounded-3xl bg-[#f4f5f7] w-full"
+          />
+        </div>
+        <div>
+          <label class="font-semibold" for="">Amount to Add</label><br />
+          <input
+            type="text"
+            placeholder="Add Amount to withdraw"
+            class="input my-2 rounded-3xl bg-[#f4f5f7] w-full"
+          />
+        </div>
+        <div>
+          <label class="font-semibold" for="">Pin Number</label><br />
+          <input
+            type="text"
+            placeholder="Enter 4 digit pin number"
+            class="input my-2 rounded-3xl bg-[#f4f5f7] w-full"
+          />
+        </div>
+        <button class="btn btn-primary w-full rounded-3xl mt-2" id="">
+          Add Money
+        </button>
+      </form>
+    </section>
   </body>
 </html>
