@@ -1,6 +1,7 @@
 // console.log("home file connected");
-const pin = 1234;
+const requirePin = 1234;
 
+// add money:
 document
   .getElementById("btn-add-money")
   .addEventListener("click", function (e) {
@@ -22,7 +23,7 @@ document
       alert("Please give valid account number");
       return;
     }
-    if (pin !== pinNumberValue) {
+    if (requirePin !== pinNumberValue) {
       alert("Please give valid pin number");
       return;
     }
@@ -32,4 +33,51 @@ document
 
     document.getElementById("available-balance").innerText =
       currentTotalBalance;
+  });
+
+// withdraw Money:
+document.getElementById("btn-withdraw").addEventListener("click", function (e) {
+  e.preventDefault();
+  const agentNumber = document.getElementById("agent-number").value;
+  const withdrawAmount = parseInt(
+    document.getElementById("withdraw-amount").value
+  );
+  //Step 2: get the available balance from the span tag
+  const availableBalance = parseInt(
+    document.getElementById("available-balance").innerText
+  );
+  const pinNumber = parseInt(document.getElementById("pin").value);
+
+  //check the condition:
+  if (agentNumber.length < 11) {
+    alert("Please give valid number");
+    return;
+  }
+  if (requirePin !== pinNumber) {
+    alert("please give correct 4 digit pin");
+    return;
+  }
+  if (availableBalance < withdrawAmount) {
+    alert("Insufficient Money. Please add money.");
+    return;
+  }
+
+  //calculate & update the available balance;
+  const currentTotalBalance = availableBalance - withdrawAmount;
+  document.getElementById("available-balance").innerText = currentTotalBalance;
+});
+
+//toggling :
+
+document
+  .getElementById("add-money-card-btn")
+  .addEventListener("click", function () {
+    document.getElementById("cash-out-form").style.display = "none";
+    document.getElementById("add-money-form").style.display = "block";
+  });
+document
+  .getElementById("cashout-money-card-btn")
+  .addEventListener("click", function () {
+    document.getElementById("add-money-form").style.display = "none";
+    document.getElementById("cash-out-form").style.display = "block";
   });
