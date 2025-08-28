@@ -16,11 +16,11 @@ example: const nodeList = document.querySelectorAll("h3, span");
 2. How do you **create and insert a new element into the DOM**?
 
 **ans:** Here are the following steps which i maintain for create & insert new element into the DOM :
-   example:
-   i.Create the HTML element : const elementP = document.createElement("p");
-   ii.Set the innerText/innerHTML: elementP.innerText = "Amar Sonar Bangla ami tomay vlobashi!";
-   iii. Track the parent element: const parent = document.getElementById('bangladesh');
-   iv. Append the child: parent.appendChild(elementP);
+   example:  
+   i.Create the HTML element : const elementP = document.createElement("p");  
+   ii.Set the innerText/innerHTML: elementP.innerText = "Amar Sonar Bangla ami tomay vlobashi!";  
+   iii. Track the parent element: const parent = document.getElementById('bangladesh');  
+   iv. Append the child: parent.appendChild(elementP);  
 
 4. What is **Event Bubbling** and how does it work?
 
@@ -32,7 +32,7 @@ example: const nodeList = document.querySelectorAll("h3, span");
 
 6. What is the difference between **preventDefault() and stopPropagation()** methods?
 
-**ans:** Here are the following difference between preventDefault() & stopPropagation() :
-   i. preventDefault(): We can use event.preventDefault() when we want to prevent the default behavior of an element. For example, this can be used to prevent a form from being submitted.
+**ans:** Here are the following difference between preventDefault() & stopPropagation() :  
+   i. preventDefault(): We can use event.preventDefault() when we want to prevent the default behavior of an element. For example, this can be used to prevent a form from being submitted.  
 
 ii. stopPropagation(): event.stopPropagation() stops the event from propagating (bubbling) up to parent elements..
